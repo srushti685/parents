@@ -13,15 +13,24 @@ html {
 }
 
 body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    background: linear-gradient(
-        135deg,
-        #fff8f5,
-        #fff0f3,
-        #fffaf0
-    );
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff8f5,
+            #fff0f3,
+            #fffaf0
+        );
+
     color: #4a3030;
+
     min-height: 100vh;
+
     overflow-x: hidden;
 }
 
@@ -40,38 +49,65 @@ body {
 ========================================= */
 
 #hearts-container {
+
     position: fixed;
+
     inset: 0;
+
     pointer-events: none;
+
     overflow: hidden;
+
     z-index: 999;
 }
 
+
 .floating-heart {
+
     position: fixed;
+
     bottom: -30px;
+
     font-size: 20px;
+
     pointer-events: none;
+
     z-index: 999;
-    animation: floatHeart 6s linear forwards;
+
+    animation:
+        floatHeart 6s linear forwards;
+
     opacity: 0.7;
 }
+
 
 @keyframes floatHeart {
 
     0% {
-        transform: translateY(0) scale(0.8);
+
+        transform:
+            translateY(0)
+            scale(0.8);
+
         opacity: 0;
     }
 
+
     20% {
+
         opacity: 0.8;
     }
 
+
     100% {
-        transform: translateY(-110vh) scale(1.2);
+
+        transform:
+            translateY(-110vh)
+            scale(1.2);
+
         opacity: 0;
     }
+
 }
 
 
@@ -80,25 +116,31 @@ body {
 ========================================= */
 
 .welcome-section {
+
     min-height: 100vh;
 
     display: flex;
+
     justify-content: center;
+
     align-items: center;
 
     padding: 30px;
 
     background:
+
         radial-gradient(
             circle at top left,
             #ffe2e7,
             transparent 40%
         ),
+
         radial-gradient(
             circle at bottom right,
             #ffe7c7,
             transparent 40%
         ),
+
         linear-gradient(
             135deg,
             #fffaf7,
@@ -112,36 +154,54 @@ body {
 ========================================= */
 
 .welcome-card {
+
     width: 100%;
+
     max-width: 850px;
 
     text-align: center;
 
     padding: 70px 50px;
 
-    background: rgba(255, 255, 255, 0.88);
+    background:
+        rgba(255, 255, 255, 0.90);
 
     border-radius: 30px;
 
     box-shadow:
-        0 25px 70px rgba(120, 70, 70, 0.18);
+        0 25px 70px
+        rgba(120, 70, 70, 0.18);
 
-    border: 1px solid rgba(255, 255, 255, 0.9);
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.9);
 
-    animation: welcomeAppear 1.2s ease;
+    animation:
+        welcomeAppear 1.2s ease;
 }
+
 
 @keyframes welcomeAppear {
 
     from {
+
         opacity: 0;
-        transform: translateY(30px) scale(0.96);
+
+        transform:
+            translateY(30px)
+            scale(0.96);
     }
 
+
     to {
+
         opacity: 1;
-        transform: translateY(0) scale(1);
+
+        transform:
+            translateY(0)
+            scale(1);
     }
+
 }
 
 
@@ -150,6 +210,7 @@ body {
 ========================================= */
 
 .small-heading {
+
     font-size: 15px;
 
     text-transform: uppercase;
@@ -167,7 +228,9 @@ body {
 ========================================= */
 
 .welcome-card h1 {
-    font-size: clamp(35px, 6vw, 65px);
+
+    font-size:
+        clamp(35px, 6vw, 65px);
 
     line-height: 1.15;
 
@@ -182,9 +245,11 @@ body {
 ========================================= */
 
 .welcome-text {
+
     max-width: 650px;
 
-    margin: 0 auto 35px;
+    margin:
+        0 auto 35px;
 
     font-size: 18px;
 
@@ -195,21 +260,25 @@ body {
 
 
 /* =========================================
-   BUTTON
+   MAIN BUTTON
 ========================================= */
 
 .main-button {
+
     border: none;
 
-    padding: 15px 32px;
+    padding:
+        15px 32px;
 
     border-radius: 50px;
 
-    background: linear-gradient(
-        135deg,
-        #c97878,
-        #a95362
-    );
+    background:
+
+        linear-gradient(
+            135deg,
+            #c97878,
+            #a95362
+        );
 
     color: white;
 
@@ -220,22 +289,30 @@ body {
     cursor: pointer;
 
     box-shadow:
-        0 10px 25px rgba(169, 83, 98, 0.3);
+        0 10px 25px
+        rgba(169, 83, 98, 0.3);
 
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease;
 }
 
+
 .main-button:hover {
-    transform: translateY(-4px);
+
+    transform:
+        translateY(-4px);
 
     box-shadow:
-        0 15px 30px rgba(169, 83, 98, 0.4);
+        0 15px 30px
+        rgba(169, 83, 98, 0.4);
 }
 
+
 .main-button:active {
-    transform: scale(0.97);
+
+    transform:
+        scale(0.97);
 }
 
 
@@ -244,18 +321,25 @@ body {
 ========================================= */
 
 #main-content {
-    animation: contentAppear 1s ease;
+
+    animation:
+        contentAppear 1s ease;
 }
+
 
 @keyframes contentAppear {
 
     from {
+
         opacity: 0;
     }
 
+
     to {
+
         opacity: 1;
     }
+
 }
 
 
@@ -264,13 +348,17 @@ body {
 ========================================= */
 
 .message-section {
+
     min-height: 100vh;
 
     display: flex;
+
     justify-content: center;
+
     align-items: center;
 
-    padding: 70px 25px;
+    padding:
+        70px 25px;
 }
 
 
@@ -279,19 +367,24 @@ body {
 ========================================= */
 
 .content-card {
+
     width: 100%;
+
     max-width: 850px;
 
     text-align: center;
 
-    padding: 60px 50px;
+    padding:
+        60px 50px;
 
-    background: rgba(255, 255, 255, 0.9);
+    background:
+        rgba(255, 255, 255, 0.90);
 
     border-radius: 28px;
 
     box-shadow:
-        0 20px 60px rgba(120, 70, 70, 0.15);
+        0 20px 60px
+        rgba(120, 70, 70, 0.15);
 }
 
 
@@ -300,6 +393,7 @@ body {
 ========================================= */
 
 .section-label {
+
     text-transform: uppercase;
 
     letter-spacing: 3px;
@@ -317,7 +411,9 @@ body {
 ========================================= */
 
 .content-card h2 {
-    font-size: clamp(30px, 5vw, 48px);
+
+    font-size:
+        clamp(30px, 5vw, 48px);
 
     color: #713f49;
 
@@ -330,6 +426,7 @@ body {
 ========================================= */
 
 .message-text {
+
     min-height: 280px;
 
     white-space: pre-line;
@@ -351,9 +448,12 @@ body {
 ========================================= */
 
 .gallery-section {
-    padding: 90px 25px;
+
+    padding:
+        90px 25px;
 
     background:
+
         linear-gradient(
             180deg,
             #fffaf7,
@@ -367,20 +467,26 @@ body {
 ========================================= */
 
 .section-heading {
+
     text-align: center;
 
-    margin-bottom: 35px;
+    margin-bottom: 25px;
 }
 
+
 .section-heading h2 {
-    font-size: clamp(30px, 5vw, 48px);
+
+    font-size:
+        clamp(30px, 5vw, 48px);
 
     color: #713f49;
 
     margin-bottom: 12px;
 }
 
+
 .section-heading p:last-child {
+
     font-size: 17px;
 
     color: #806767;
@@ -389,31 +495,37 @@ body {
 
 /* =========================================
    MUSIC CONTROL
-   CENTERED ABOVE ALL PHOTOS
 ========================================= */
 
 .music-control {
+
     display: flex;
 
     justify-content: center;
 
     align-items: center;
 
-    margin: 20px auto 45px;
+    margin:
+        20px auto 45px;
 }
 
+
 #music-btn {
+
     border: none;
 
-    padding: 14px 28px;
+    padding:
+        14px 30px;
 
     border-radius: 50px;
 
-    background: linear-gradient(
-        135deg,
-        #d69b78,
-        #b86b73
-    );
+    background:
+
+        linear-gradient(
+            135deg,
+            #d69b78,
+            #b86b73
+        );
 
     color: white;
 
@@ -424,18 +536,23 @@ body {
     cursor: pointer;
 
     box-shadow:
-        0 10px 25px rgba(160, 90, 90, 0.25);
+        0 10px 25px
+        rgba(160, 90, 90, 0.25);
 
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease;
 }
 
+
 #music-btn:hover {
-    transform: translateY(-3px);
+
+    transform:
+        translateY(-3px);
 
     box-shadow:
-        0 14px 30px rgba(160, 90, 90, 0.35);
+        0 14px 30px
+        rgba(160, 90, 90, 0.35);
 }
 
 
@@ -444,6 +561,7 @@ body {
 ========================================= */
 
 .gallery {
+
     width: 100%;
 
     max-width: 1200px;
@@ -464,6 +582,7 @@ body {
 ========================================= */
 
 .photo-card {
+
     background: white;
 
     border-radius: 22px;
@@ -473,22 +592,30 @@ body {
     overflow: hidden;
 
     box-shadow:
-        0 15px 40px rgba(100, 60, 60, 0.15);
+        0 15px 40px
+        rgba(100, 60, 60, 0.15);
 
-    border: 1px solid #f5dddd;
+    border:
+        1px solid
+        #f5dddd;
 
     transition:
         transform 0.35s ease,
         box-shadow 0.35s ease;
 
-    animation: photoAppear 0.8s ease both;
+    animation:
+        photoAppear 0.8s ease both;
 }
 
+
 .photo-card:hover {
-    transform: translateY(-8px);
+
+    transform:
+        translateY(-8px);
 
     box-shadow:
-        0 22px 50px rgba(100, 60, 60, 0.22);
+        0 22px 50px
+        rgba(100, 60, 60, 0.22);
 }
 
 
@@ -497,6 +624,7 @@ body {
 ========================================= */
 
 .photo-card img {
+
     display: block;
 
     width: 100%;
@@ -516,9 +644,11 @@ body {
 ========================================= */
 
 .photo-caption {
+
     text-align: center;
 
-    padding: 17px 10px 12px;
+    padding:
+        17px 10px 12px;
 
     font-size: 17px;
 
@@ -535,19 +665,29 @@ body {
 @keyframes photoAppear {
 
     from {
+
         opacity: 0;
-        transform: translateY(30px) scale(0.97);
+
+        transform:
+            translateY(30px)
+            scale(0.97);
     }
 
+
     to {
+
         opacity: 1;
-        transform: translateY(0) scale(1);
+
+        transform:
+            translateY(0)
+            scale(1);
     }
+
 }
 
 
 /* =========================================
-   DIFFERENT ANIMATION DELAYS
+   PHOTO ANIMATION DELAYS
 ========================================= */
 
 .photo-card:nth-child(1) {
@@ -588,7 +728,9 @@ body {
 ========================================= */
 
 .final-section {
-    padding: 100px 25px;
+
+    padding:
+        100px 25px;
 
     display: flex;
 
@@ -597,6 +739,7 @@ body {
     align-items: center;
 
     background:
+
         radial-gradient(
             circle at center,
             #ffe4e9,
@@ -610,20 +753,24 @@ body {
 ========================================= */
 
 .final-card {
+
     width: 100%;
 
     max-width: 800px;
 
     text-align: center;
 
-    padding: 70px 40px;
+    padding:
+        70px 40px;
 
-    background: rgba(255, 255, 255, 0.9);
+    background:
+        rgba(255, 255, 255, 0.90);
 
     border-radius: 30px;
 
     box-shadow:
-        0 20px 60px rgba(120, 70, 70, 0.15);
+        0 20px 60px
+        rgba(120, 70, 70, 0.15);
 }
 
 
@@ -632,12 +779,15 @@ body {
 ========================================= */
 
 .big-heart {
+
     font-size: 70px;
 
     margin-bottom: 20px;
 
-    animation: heartbeat 1.5s infinite;
+    animation:
+        heartbeat 1.5s infinite;
 }
+
 
 @keyframes heartbeat {
 
@@ -660,6 +810,7 @@ body {
     100% {
         transform: scale(1);
     }
+
 }
 
 
@@ -668,7 +819,9 @@ body {
 ========================================= */
 
 .final-card h2 {
-    font-size: clamp(30px, 5vw, 50px);
+
+    font-size:
+        clamp(30px, 5vw, 50px);
 
     color: #713f49;
 
@@ -681,6 +834,7 @@ body {
 ========================================= */
 
 .final-card p {
+
     font-size: 18px;
 
     line-height: 1.8;
@@ -690,7 +844,9 @@ body {
     margin-bottom: 12px;
 }
 
+
 .final-card strong {
+
     color: #a95362;
 }
 
@@ -702,22 +858,33 @@ body {
 @media (max-width: 800px) {
 
     .welcome-card {
-        padding: 55px 30px;
+
+        padding:
+            55px 30px;
     }
+
 
     .content-card {
-        padding: 50px 30px;
+
+        padding:
+            50px 30px;
     }
+
 
     .gallery {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+            1fr;
     }
 
+
     .photo-card img {
+
         height: auto;
 
         max-height: 600px;
     }
+
 }
 
 
@@ -728,42 +895,61 @@ body {
 @media (max-width: 600px) {
 
     .welcome-section {
+
         padding: 18px;
     }
 
+
     .welcome-card {
-        padding: 45px 22px;
+
+        padding:
+            45px 22px;
 
         border-radius: 22px;
     }
 
+
     .welcome-card h1 {
+
         font-size: 34px;
     }
 
+
     .welcome-text {
+
         font-size: 16px;
 
         line-height: 1.7;
     }
 
+
     .main-button {
+
         width: 100%;
 
-        padding: 14px 20px;
+        padding:
+            14px 20px;
     }
+
 
     .message-section {
-        padding: 50px 18px;
+
+        padding:
+            50px 18px;
     }
 
+
     .content-card {
-        padding: 40px 22px;
+
+        padding:
+            40px 22px;
 
         border-radius: 22px;
     }
 
+
     .message-text {
+
         font-size: 16px;
 
         line-height: 1.8;
@@ -771,25 +957,36 @@ body {
         min-height: 330px;
     }
 
+
     .gallery-section {
-        padding: 65px 18px;
+
+        padding:
+            65px 18px;
     }
 
+
     .section-heading h2 {
+
         font-size: 32px;
     }
 
+
     .gallery {
+
         gap: 22px;
     }
 
+
     .photo-card {
+
         padding: 8px;
 
         border-radius: 18px;
     }
 
+
     .photo-card img {
+
         height: auto;
 
         max-height: 500px;
@@ -797,35 +994,50 @@ body {
         border-radius: 13px;
     }
 
+
     .photo-caption {
+
         font-size: 15px;
 
-        padding: 14px 5px 10px;
+        padding:
+            14px 5px 10px;
     }
+
 
     #music-btn {
-        width: auto;
 
-        padding: 13px 24px;
+        padding:
+            13px 24px;
 
         font-size: 15px;
     }
 
+
     .final-section {
-        padding: 70px 18px;
+
+        padding:
+            70px 18px;
     }
 
+
     .final-card {
-        padding: 50px 22px;
+
+        padding:
+            50px 22px;
 
         border-radius: 22px;
     }
 
+
     .big-heart {
+
         font-size: 60px;
     }
 
+
     .final-card p {
+
         font-size: 16px;
     }
+
 }
