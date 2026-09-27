@@ -1,910 +1,272 @@
-/* =========================================
-   FOR MOM & DAD ❤️
-   CLEAN + ELEGANT DESIGN
-========================================= */
+<!DOCTYPE html>
+<html lang="en">
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<head>
+    <meta charset="UTF-8">
 
-html {
-    scroll-behavior: smooth;
-}
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-body {
-    font-family: Georgia, "Times New Roman", serif;
+    <title>For Mom & Dad ❤️</title>
 
-    color: #5a3b40;
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    background:
-        linear-gradient(
-            135deg,
-            #fffaf7,
-            #fff0f1,
-            #fff8ef
-        );
+<body>
 
-    overflow-x: hidden;
-}
+    <!-- =========================================
+         FLOATING HEARTS
+    ========================================== -->
 
-.hidden {
-    display: none !important;
-}
+    <div id="hearts-container"></div>
 
 
-/* =========================================
-   COMMON SECTION
-========================================= */
+    <!-- =========================================
+         WELCOME SECTION
+    ========================================== -->
 
-.section {
-    min-height: 100vh;
+    <section id="welcome" class="welcome-section">
 
-    display: flex;
+        <div class="welcome-card">
 
-    align-items: center;
+            <p class="small-heading">
+                A Little Surprise For You
+            </p>
 
-    justify-content: center;
+            <h1>
+                For the Two Most Special People in My Life ❤️
+            </h1>
 
-    padding: 90px 20px;
+            <p class="welcome-text">
+                This little website is a small way of saying
+                thank you for all the love, care and support
+                you have given me.
+            </p>
 
-    position: relative;
-}
+            <button id="open-heart-btn"
+                    class="main-button"
+                    type="button">
 
+                Open My Heart ❤️
 
-/* =========================================
-   FLOATING HEARTS
-========================================= */
+            </button>
 
-.floating-hearts {
-    position: fixed;
+        </div>
 
-    inset: 0;
+    </section>
 
-    pointer-events: none;
 
-    overflow: hidden;
 
-    z-index: 1;
-}
+    <!-- =========================================
+         MAIN CONTENT
+    ========================================== -->
 
-.floating-hearts span {
-    position: absolute;
+    <main id="main-content" class="hidden">
 
-    bottom: -40px;
 
-    color: rgba(224, 93, 117, 0.28);
+        <!-- =====================================
+             MESSAGE SECTION
+        ====================================== -->
 
-    font-size: 20px;
+        <section id="message-section"
+                 class="message-section">
 
-    animation: floatHeart 10s linear infinite;
-}
+            <div class="content-card">
 
-.floating-hearts span:nth-child(1) {
-    left: 8%;
-}
+                <p class="section-label">
+                    From My Heart
+                </p>
 
-.floating-hearts span:nth-child(2) {
-    left: 25%;
-    animation-delay: 2s;
-}
+                <h2>
+                    Dear Mom & Dad ❤️
+                </h2>
 
-.floating-hearts span:nth-child(3) {
-    left: 42%;
-    animation-delay: 4s;
-}
+                <div id="message-text"
+                     class="message-text">
+                </div>
 
-.floating-hearts span:nth-child(4) {
-    left: 60%;
-    animation-delay: 1s;
-}
 
-.floating-hearts span:nth-child(5) {
-    left: 78%;
-    animation-delay: 3s;
-}
+                <button id="surprise-btn"
+                        class="main-button"
+                        type="button">
 
-.floating-hearts span:nth-child(6) {
-    left: 92%;
-    animation-delay: 5s;
-}
+                    One More Surprise ✨
 
-@keyframes floatHeart {
-    0% {
-        transform: translateY(0) rotate(0);
-        opacity: 0;
-    }
+                </button>
 
-    20% {
-        opacity: 1;
-    }
+            </div>
 
-    100% {
-        transform: translateY(-110vh) rotate(360deg);
-        opacity: 0;
-    }
-}
+        </section>
 
 
-/* =========================================
-   WELCOME
-========================================= */
 
-.welcome-section {
-    text-align: center;
+        <!-- =====================================
+             PHOTO GALLERY
+        ====================================== -->
 
-    background:
-        radial-gradient(
-            circle at center,
-            #fff,
-            #fff0f1
-        );
-}
+        <section id="gallery-section"
+                 class="gallery-section hidden">
 
-.welcome-card {
-    width: min(780px, 92%);
+            <div class="section-heading">
 
-    padding: 70px 45px;
+                <p class="section-label">
+                    Beautiful Memories
+                </p>
 
-    background: rgba(255, 255, 255, 0.82);
+                <h2>
+                    Moments I Treasure ❤️
+                </h2>
 
-    border: 1px solid rgba(255, 210, 210, 0.7);
+                <p>
+                    Every memory with you is special to me.
+                </p>
 
-    border-radius: 35px;
+            </div>
 
-    box-shadow:
-        0 25px 70px rgba(100, 50, 60, 0.15);
 
-    animation: fadeUp 1s ease;
-}
+            <div class="gallery">
 
-.small-heart {
-    font-size: 48px;
 
-    animation: heartbeat 2s infinite;
-}
+                <!-- PHOTO 1 -->
 
-.little-heading {
-    margin-top: 15px;
+                <div class="photo-card">
 
-    color: #bd7c54;
+                    <img src="images/parents1.jpg"
+                         alt="A beautiful memory of Mom and Dad">
 
-    font-size: 14px;
+                    <div class="photo-caption">
+                        A beautiful memory ❤️
+                    </div>
 
-    letter-spacing: 3px;
+                </div>
 
-    text-transform: uppercase;
-}
 
-h1 {
-    margin-top: 18px;
+                <!-- PHOTO 2 -->
 
-    font-family: Georgia, serif;
+                <div class="photo-card">
 
-    font-size: clamp(42px, 7vw, 72px);
+                    <img src="images/parents2.jpg"
+                         alt="Mom and Dad together">
 
-    line-height: 1.05;
+                    <div class="photo-caption">
+                        Together forever ❤️
+                    </div>
 
-    color: #633c42;
-}
+                </div>
 
-.welcome-text {
-    margin-top: 20px;
 
-    font-size: 28px;
+                <!-- PHOTO 3 -->
 
-    color: #c34e68;
-}
+                <div class="photo-card">
 
-.sub-text {
-    max-width: 570px;
+                    <img src="images/parents3.jpg"
+                         alt="A special family memory">
 
-    margin: 15px auto 0;
+                    <div class="photo-caption">
+                        A moment to remember ✨
+                    </div>
 
-    font-size: 17px;
+                </div>
 
-    line-height: 1.8;
 
-    color: #80656a;
-}
+                <!-- PHOTO 4 -->
 
+                <div class="photo-card">
 
-/* =========================================
-   BUTTON
-========================================= */
+                    <img src="images/parents4.jpg"
+                         alt="A precious memory with Mom and Dad">
 
-.main-button {
-    margin-top: 32px;
+                    <div class="photo-caption">
+                        My favorite people ❤️
+                    </div>
 
-    padding: 15px 30px;
+                </div>
 
-    border: none;
+            </div>
 
-    border-radius: 40px;
+        </section>
 
-    background:
-        linear-gradient(
-            135deg,
-            #bd3f5e,
-            #dc6a82
-        );
 
-    color: white;
 
-    font-family: Georgia, serif;
+        <!-- =====================================
+             FINAL MESSAGE
+        ====================================== -->
 
-    font-size: 16px;
+        <section id="final-section"
+                 class="final-section hidden">
 
-    cursor: pointer;
+            <div class="final-card">
 
-    box-shadow:
-        0 10px 25px rgba(189, 63, 94, 0.3);
+                <div class="big-heart">
+                    ❤️
+                </div>
 
-    transition: 0.3s ease;
-}
+                <h2>
+                    Thank You For Everything!!
+                </h2>
 
-.main-button:hover {
-    transform: translateY(-4px);
+                <p>
+                    No matter where life takes me,
+                    I will always carry your love with me.
+                </p>
 
-    box-shadow:
-        0 15px 35px rgba(189, 63, 94, 0.4);
-}
+                <p>
+                    Love you forever,
+                    <strong>Mom & Dad. ❤️</strong>
+                </p>
 
+            </div>
 
-/* =========================================
-   MESSAGE
-========================================= */
+        </section>
 
-.message-section {
-    background:
-        linear-gradient(
-            180deg,
-            #fff4f3,
-            #fffaf5
-        );
-}
 
-.message-card {
-    width: min(850px, 92%);
+    </main>
 
-    padding: 65px 45px;
 
-    text-align: center;
 
-    background: rgba(255, 255, 255, 0.85);
+    <!-- =========================================
+         AUDIO
+    ========================================== -->
 
-    border-radius: 35px;
+    <audio id="background-music"
+           loop
+           preload="auto">
 
-    box-shadow:
-        0 25px 65px rgba(100, 50, 60, 0.13);
-}
+        <source src="music/parents-song.mp3"
+                type="audio/mpeg">
 
-.section-label {
-    color: #bd7c54;
+        Your browser does not support the audio element.
 
-    font-size: 13px;
+    </audio>
 
-    text-transform: uppercase;
 
-    letter-spacing: 3px;
 
-    margin-bottom: 15px;
-}
+    <!-- =========================================
+         MUSIC CONTROL
+    ========================================== -->
 
-.message-card h2 {
-    font-size: clamp(35px, 5vw, 52px);
+    <div id="music-control"
+         class="music-control hidden">
 
-    color: #633c42;
+        <button id="music-btn"
+                type="button"
+                aria-label="Play or pause music">
 
-    margin-bottom: 30px;
-}
+            🎵 Play Music
 
-.parent-message {
-    max-width: 680px;
+        </button>
 
-    min-height: 250px;
+    </div>
 
-    margin: auto;
 
-    white-space: pre-line;
 
-    font-size: 19px;
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
 
-    line-height: 2;
+    <script src="script.js"></script>
 
-    color: #70585d;
+</body>
 
-    text-align: center;
-}
-
-
-/* =========================================
-   SURPRISE
-========================================= */
-
-.surprise-section {
-    text-align: center;
-
-    background:
-        radial-gradient(
-            circle at center,
-            #fff5f3,
-            #ffe9eb
-        );
-}
-
-.surprise-content {
-    width: 100%;
-
-    max-width: 800px;
-}
-
-.surprise-content h2 {
-    font-size: clamp(35px, 6vw, 55px);
-
-    color: #633c42;
-
-    margin-bottom: 18px;
-}
-
-.surprise-text {
-    max-width: 600px;
-
-    margin: auto;
-
-    font-size: 17px;
-
-    line-height: 1.8;
-
-    color: #80656a;
-}
-
-
-/* =========================================
-   GIFT BOX
-========================================= */
-
-.gift-box {
-    position: relative;
-
-    width: 270px;
-
-    height: 260px;
-
-    margin: 45px auto 15px;
-
-    border: none;
-
-    background: transparent;
-
-    cursor: pointer;
-
-    display: block;
-
-    transition: 0.4s;
-}
-
-.gift-box:hover {
-    transform:
-        translateY(-10px)
-        scale(1.04);
-}
-
-.gift-body {
-    position: absolute;
-
-    left: 30px;
-
-    bottom: 15px;
-
-    width: 210px;
-
-    height: 150px;
-
-    border-radius: 10px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #c04462,
-            #df7188
-        );
-
-    box-shadow:
-        0 20px 35px rgba(100, 40, 50, 0.25);
-}
-
-.gift-ribbon {
-    position: absolute;
-
-    left: 86px;
-
-    top: 0;
-
-    width: 38px;
-
-    height: 150px;
-
-    background: #f3d18a;
-}
-
-.gift-lid {
-    position: absolute;
-
-    z-index: 5;
-
-    left: 20px;
-
-    top: 60px;
-
-    width: 230px;
-
-    height: 55px;
-
-    border-radius: 10px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #d45772,
-            #eb8096
-        );
-
-    box-shadow:
-        0 10px 20px rgba(100, 40, 50, 0.2);
-
-    transition: 0.8s ease;
-}
-
-.gift-lid span {
-    position: absolute;
-
-    left: 96px;
-
-    width: 38px;
-
-    height: 55px;
-
-    background: #f3d18a;
-}
-
-.gift-message {
-    position: absolute;
-
-    left: 0;
-    right: 0;
-
-    bottom: 28px;
-
-    color: white;
-
-    font-size: 18px;
-}
-
-.gift-box.opened .gift-lid {
-    transform:
-        translateY(-85px)
-        rotate(-7deg);
-}
-
-.click-text {
-    color: #b75b6d;
-
-    font-size: 15px;
-
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0%,
-    100% {
-        opacity: 0.6;
-    }
-
-    50% {
-        opacity: 1;
-    }
-}
-
-
-/* =========================================
-   GALLERY
-========================================= */
-
-.gallery-section {
-    display: block;
-
-    min-height: auto;
-
-    padding-top: 80px;
-
-    padding-bottom: 100px;
-
-    background:
-        linear-gradient(
-            180deg,
-            #fffaf7,
-            #fff0f1
-        );
-}
-
-.gallery-heading {
-    text-align: center;
-
-    margin-bottom: 25px;
-}
-
-.gallery-heading h2 {
-    font-size: clamp(38px, 6vw, 58px);
-
-    color: #633c42;
-
-    margin-bottom: 12px;
-}
-
-.gallery-heading p:last-child {
-    color: #80656a;
-
-    font-size: 17px;
-}
-
-
-/* =========================================
-   MUSIC BUTTON
-   CENTERED ABOVE PHOTOS
-========================================= */
-
-.music-control {
-    position: relative;
-
-    top: auto;
-    right: auto;
-
-    display: flex;
-
-    justify-content: center;
-
-    margin: 0 auto 50px;
-
-    z-index: 20;
-}
-
-.music-control button {
-    border: 1px solid #f0c6cc;
-
-    padding: 13px 27px;
-
-    border-radius: 50px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #ffffff,
-            #fff5f5
-        );
-
-    color: #a33f58;
-
-    font-family: Georgia, serif;
-
-    font-size: 15px;
-
-    cursor: pointer;
-
-    box-shadow:
-        0 10px 25px rgba(100, 50, 60, 0.15);
-
-    transition: 0.3s;
-}
-
-.music-control button:hover {
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 15px 35px rgba(100, 50, 60, 0.22);
-}
-
-
-/* =========================================
-   8 PHOTO BOXES
-========================================= */
-
-.photo-grid {
-    width: min(1150px, 94%);
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(2, 1fr);
-
-    gap: 35px;
-}
-
-
-/* each box */
-
-.photo-card {
-    background: white;
-
-    border-radius: 22px;
-
-    padding: 12px;
-
-    overflow: hidden;
-
-    border:
-        1px solid #f3d9dc;
-
-    box-shadow:
-        0 15px 40px rgba(90, 45, 55, 0.13);
-
-    opacity: 0;
-
-    transform: translateY(30px);
-
-    animation:
-        photoAppear 0.8s ease forwards;
-
-    transition:
-        transform 0.35s ease,
-        box-shadow 0.35s ease;
-}
-
-.photo-card:nth-child(2) {
-    animation-delay: 0.1s;
-}
-
-.photo-card:nth-child(3) {
-    animation-delay: 0.2s;
-}
-
-.photo-card:nth-child(4) {
-    animation-delay: 0.3s;
-}
-
-.photo-card:nth-child(5) {
-    animation-delay: 0.4s;
-}
-
-.photo-card:nth-child(6) {
-    animation-delay: 0.5s;
-}
-
-.photo-card:nth-child(7) {
-    animation-delay: 0.6s;
-}
-
-.photo-card:nth-child(8) {
-    animation-delay: 0.7s;
-}
-
-.photo-card:hover {
-    transform: translateY(-8px);
-
-    box-shadow:
-        0 25px 55px rgba(90, 45, 55, 0.22);
-}
-
-
-/* =========================================
-   FULL IMAGE
-========================================= */
-
-.photo-card img {
-    width: 100%;
-
-    height: 420px;
-
-    display: block;
-
-    object-fit: contain;
-
-    background: #fff8f5;
-
-    border-radius: 15px;
-
-    transition: 0.4s;
-}
-
-.photo-card:hover img {
-    transform: scale(1.015);
-}
-
-
-/* =========================================
-   CAPTION
-========================================= */
-
-.photo-caption {
-    padding: 20px 12px 14px;
-
-    text-align: center;
-}
-
-.photo-caption h3 {
-    font-size: 23px;
-
-    color: #633c42;
-
-    margin-bottom: 7px;
-}
-
-.photo-caption p {
-    font-size: 14px;
-
-    line-height: 1.6;
-
-    color: #80656a;
-}
-
-
-/* =========================================
-   FINAL
-========================================= */
-
-.final-section {
-    min-height: 75vh;
-
-    text-align: center;
-
-    background:
-        radial-gradient(
-            circle at center,
-            #fff1f1,
-            #ffe2e5
-        );
-}
-
-.final-card {
-    width: min(800px, 92%);
-
-    padding: 65px 40px;
-
-    background:
-        rgba(255, 255, 255, 0.85);
-
-    border-radius: 35px;
-
-    box-shadow:
-        0 25px 70px rgba(100, 50, 60, 0.15);
-}
-
-.big-heart {
-    font-size: 75px;
-
-    animation: heartbeat 1.6s infinite;
-}
-
-.final-card h2 {
-    margin-top: 20px;
-
-    font-size: clamp(35px, 6vw, 55px);
-
-    color: #633c42;
-}
-
-.final-card > p {
-    max-width: 600px;
-
-    margin: 20px auto 0;
-
-    font-size: 19px;
-
-    line-height: 1.8;
-
-    color: #80656a;
-}
-
-.final-love {
-    color: #bd4965 !important;
-
-    font-size: 22px !important;
-}
-
-.heart-line {
-    margin-top: 25px;
-
-    color: #d55b73;
-
-    letter-spacing: 10px;
-}
-
-
-/* =========================================
-   ANIMATIONS
-========================================= */
-
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-
-        transform:
-            translateY(35px);
-    }
-
-    to {
-        opacity: 1;
-
-        transform:
-            translateY(0);
-    }
-}
-
-@keyframes photoAppear {
-    to {
-        opacity: 1;
-
-        transform:
-            translateY(0);
-    }
-}
-
-@keyframes heartbeat {
-    0%,
-    100% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.13);
-    }
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 700px) {
-
-    .section {
-        padding:
-            75px 15px;
-    }
-
-    .welcome-card {
-        padding:
-            55px 25px;
-    }
-
-    h1 {
-        font-size: 45px;
-    }
-
-    .message-card {
-        padding:
-            50px 25px;
-    }
-
-    .parent-message {
-        font-size: 18px;
-    }
-
-    .photo-grid {
-        grid-template-columns: 1fr;
-
-        gap: 25px;
-    }
-
-    .photo-card img {
-        height: auto;
-
-        max-height: 500px;
-
-        object-fit: contain;
-    }
-
-    .music-control {
-        margin-bottom: 35px;
-    }
-
-    .music-control button {
-        font-size: 14px;
-
-        padding:
-            12px 22px;
-    }
-}
+</html>
