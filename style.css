@@ -1,0 +1,656 @@
+```css
+/* =====================================================
+   GLOBAL STYLES
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #fff8f3;
+    color: #4b3030;
+    overflow-x: hidden;
+}
+
+button {
+    font-family: inherit;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =====================================================
+   WELCOME SCREEN
+===================================================== */
+
+.welcome-section {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    overflow: hidden;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255, 220, 205, 0.9),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(250, 205, 215, 0.8),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #fff9f3,
+            #ffe9df,
+            #fff4ed
+        );
+}
+
+.welcome-content {
+    width: min(850px, 90%);
+    position: relative;
+    z-index: 2;
+
+    animation: welcomeAppear 2s ease forwards;
+}
+
+.small-heading {
+    color: #ad7566;
+    font-size: 1rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.welcome-content h1 {
+    font-size: clamp(2.5rem, 6vw, 5.5rem);
+    line-height: 1.1;
+    font-weight: 400;
+    color: #4b3030;
+    margin-bottom: 30px;
+}
+
+.welcome-content h1 span {
+    display: block;
+    color: #b86b76;
+    margin-top: 10px;
+}
+
+.welcome-text {
+    max-width: 650px;
+    margin: 0 auto 40px;
+
+    font-size: 1.2rem;
+    line-height: 1.8;
+
+    color: #725555;
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.main-button {
+    border: none;
+    outline: none;
+
+    padding: 16px 32px;
+
+    border-radius: 50px;
+
+    background: linear-gradient(
+        135deg,
+        #bd737e,
+        #d99691
+    );
+
+    color: white;
+
+    font-size: 1rem;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px rgba(160, 90, 90, 0.25);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.main-button:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 30px rgba(160, 90, 90, 0.35);
+}
+
+.main-button:active {
+    transform: translateY(0);
+}
+
+
+/* =====================================================
+   MESSAGE SECTION
+===================================================== */
+
+.message-section {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 100px 20px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fff9f4,
+            #fff1ed
+        );
+}
+
+.section-content {
+    width: min(800px, 95%);
+}
+
+.section-label {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 0.8rem;
+    color: #b4776d;
+    margin-bottom: 20px;
+}
+
+.message-section h2 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 400;
+    color: #543333;
+    margin-bottom: 40px;
+}
+
+.message-text {
+    min-height: 280px;
+
+    font-size: 1.2rem;
+    line-height: 2;
+
+    color: #654b4b;
+
+    white-space: pre-line;
+
+    margin-bottom: 40px;
+}
+
+
+/* =====================================================
+   GALLERY
+===================================================== */
+
+.gallery-section {
+    padding: 110px 5%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffaf5,
+            #fdf0ec
+        );
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 70px;
+}
+
+.section-heading h2 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 400;
+    color: #543333;
+    margin-bottom: 20px;
+}
+
+.section-heading > p:last-child {
+    font-size: 1.1rem;
+    color: #775b5b;
+    line-height: 1.7;
+}
+
+
+/* Photo grid */
+
+.gallery {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(250px, 1fr));
+
+    gap: 35px;
+}
+
+.photo-card {
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 450px;
+
+    border-radius: 25px;
+
+    background: white;
+
+    box-shadow:
+        0 20px 50px rgba(110, 70, 70, 0.15);
+
+    animation: photoAppear 1s ease both;
+}
+
+.photo-large {
+    min-height: 550px;
+}
+
+.photo-card img {
+    width: 100%;
+    height: 100%;
+
+    min-height: 450px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform 0.8s ease;
+}
+
+.photo-card:hover img {
+    transform: scale(1.07);
+}
+
+.photo-caption {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 50px 25px 25px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(30, 15, 15, 0.8)
+        );
+}
+
+.photo-caption h3 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.photo-caption p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+
+/* =====================================================
+   FINAL SECTION
+===================================================== */
+
+.final-section {
+    min-height: 90vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 100px 20px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #ffe5df,
+            #fff7f1
+        );
+}
+
+.final-content {
+    max-width: 800px;
+}
+
+.big-heart {
+    font-size: 5rem;
+
+    margin-bottom: 30px;
+
+    animation: heartbeat 1.5s infinite;
+}
+
+.final-content h2 {
+    font-size: clamp(2.2rem, 5vw, 4.5rem);
+
+    font-weight: 400;
+
+    color: #543333;
+
+    margin-bottom: 30px;
+}
+
+.final-message {
+    font-size: 1.3rem;
+
+    line-height: 2;
+
+    color: #6c5050;
+
+    margin-bottom: 30px;
+}
+
+.final-content h3 {
+    font-size: 1.5rem;
+
+    line-height: 1.8;
+
+    font-weight: 400;
+
+    color: #a05f68;
+}
+
+.heart-line {
+    margin-top: 35px;
+
+    color: #c87b83;
+
+    letter-spacing: 15px;
+
+    font-size: 1.3rem;
+}
+
+
+/* =====================================================
+   MUSIC CONTROL
+===================================================== */
+
+.music-control {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    z-index: 100;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 10px 18px 10px 10px;
+
+    border-radius: 50px;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 10px 30px rgba(80, 50, 50, 0.2);
+}
+
+.music-control button {
+    width: 45px;
+    height: 45px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #bd737e;
+
+    color: white;
+
+    font-size: 1.2rem;
+
+    cursor: pointer;
+
+    transition: transform 0.3s ease;
+}
+
+.music-control button:hover {
+    transform: scale(1.1);
+}
+
+.music-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.music-info span {
+    font-size: 0.9rem;
+    color: #543333;
+}
+
+.music-info small {
+    font-size: 0.7rem;
+    color: #9a7777;
+}
+
+
+/* =====================================================
+   FLOATING HEARTS
+===================================================== */
+
+#hearts-container {
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 50;
+
+    overflow: hidden;
+}
+
+.floating-heart {
+    position: absolute;
+
+    bottom: -30px;
+
+    font-size: 18px;
+
+    opacity: 0;
+
+    animation:
+        floatHeart 6s linear forwards;
+}
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes welcomeAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes photoAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes heartbeat {
+
+    0% {
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(1.15);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.12);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+}
+
+
+@keyframes floatHeart {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.7;
+    }
+
+    100% {
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVE DESIGN
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .welcome-content h1 {
+        font-size: 2.7rem;
+    }
+
+    .welcome-text {
+        font-size: 1rem;
+    }
+
+    .message-section {
+        padding: 80px 20px;
+    }
+
+    .message-text {
+        font-size: 1rem;
+        line-height: 1.9;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-card,
+    .photo-large {
+        min-height: 430px;
+    }
+
+    .photo-card img {
+        min-height: 430px;
+    }
+
+    .music-control {
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .music-info {
+        display: none;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .small-heading {
+        font-size: 0.7rem;
+        letter-spacing: 2px;
+    }
+
+    .welcome-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .main-button {
+        padding: 14px 24px;
+        font-size: 0.9rem;
+    }
+
+    .photo-card,
+    .photo-large,
+    .photo-card img {
+        min-height: 350px;
+    }
+
+    .final-message {
+        font-size: 1.05rem;
+    }
+
+    .big-heart {
+        font-size: 4rem;
+    }
+}
+```
