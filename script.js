@@ -1,30 +1,23 @@
-```javascript
 /* =====================================================
    GET HTML ELEMENTS
 ===================================================== */
 
 const welcomeSection = document.getElementById("welcome");
-
 const mainContent = document.getElementById("main-content");
 
 const messageSection = document.getElementById("message-section");
-
 const gallerySection = document.getElementById("gallery-section");
-
 const finalSection = document.getElementById("final-section");
 
 const openHeartButton = document.getElementById("open-heart-btn");
-
 const surpriseButton = document.getElementById("surprise-btn");
 
 const messageText = document.getElementById("message-text");
 
 const musicControl = document.getElementById("music-control");
-
 const musicButton = document.getElementById("music-btn");
 
 const backgroundMusic = document.getElementById("background-music");
-
 const heartsContainer = document.getElementById("hearts-container");
 
 
@@ -32,7 +25,8 @@ const heartsContainer = document.getElementById("hearts-container");
    PARENT MESSAGE
 ===================================================== */
 
-const parentMessage = `Words can never truly express how grateful I am to have you in my life.
+const parentMessage = `
+Words can never truly express how grateful I am to have you in my life.
 
 Thank you for every sacrifice, every lesson, every smile, every moment of support, and for always being there for me.
 
@@ -40,7 +34,8 @@ Whatever I become in life, a part of it will always be because of you.
 
 You are my strength, my inspiration, and my home.
 
-I love you both more than words can say. ❤️`;
+I love you both more than words can say. ❤️
+`;
 
 
 /* =====================================================
@@ -62,9 +57,7 @@ function typeMessage(text, element, speed = 30) {
             index++;
 
             setTimeout(typeCharacter, speed);
-
         }
-
     }
 
     typeCharacter();
@@ -77,20 +70,20 @@ function typeMessage(text, element, speed = 30) {
 
 openHeartButton.addEventListener("click", function () {
 
-    // Hide welcome screen
+    // Fade out welcome screen
     welcomeSection.style.transition = "opacity 1s ease";
-
     welcomeSection.style.opacity = "0";
 
     // Wait for fade-out
     setTimeout(function () {
 
+        // Hide welcome screen
         welcomeSection.classList.add("hidden");
 
         // Show main content
         mainContent.classList.remove("hidden");
 
-        // Start message typing
+        // Start typing message
         typeMessage(parentMessage, messageText, 25);
 
         // Scroll to message
@@ -109,29 +102,31 @@ openHeartButton.addEventListener("click", function () {
 
 surpriseButton.addEventListener("click", function () {
 
-    // Reveal gallery
+    // Show gallery
     gallerySection.classList.remove("hidden");
 
-    // Reveal final section
+    // Show final section
     finalSection.classList.remove("hidden");
 
     // Show music controls
     musicControl.classList.remove("hidden");
 
-    // Try to start music
+
+    /* =================================================
+       START MUSIC
+    ================================================= */
+
     backgroundMusic.play()
+
         .then(function () {
 
             musicButton.textContent = "⏸️";
 
         })
+
         .catch(function () {
 
-            /*
-               If the browser blocks playback,
-               the user can press the music button.
-            */
-
+            // Browser may block automatic audio
             musicButton.textContent = "▶️";
 
         });
@@ -162,11 +157,13 @@ musicButton.addEventListener("click", function () {
     if (backgroundMusic.paused) {
 
         backgroundMusic.play()
+
             .then(function () {
 
                 musicButton.textContent = "⏸️";
 
             })
+
             .catch(function () {
 
                 alert(
@@ -198,18 +195,23 @@ function createHeart() {
 
     heart.textContent = "♥";
 
+
     // Random horizontal position
     heart.style.left =
         Math.random() * 100 + "%";
+
 
     // Random size
     heart.style.fontSize =
         (12 + Math.random() * 20) + "px";
 
+
     // Random animation duration
     heart.style.animationDuration =
         (4 + Math.random() * 5) + "s";
 
+
+    // Add heart to page
     heartsContainer.appendChild(heart);
 
 
@@ -224,17 +226,18 @@ function createHeart() {
 
 
 /* =====================================================
-   START HEART ANIMATION
+   START FLOATING HEARTS
 ===================================================== */
 
 let heartInterval = null;
 
 function startFloatingHearts() {
 
-    // Prevent creating multiple intervals
+    // Prevent multiple intervals
     if (heartInterval !== null) {
         return;
     }
+
 
     // Create hearts continuously
     heartInterval = setInterval(function () {
@@ -248,7 +251,7 @@ function startFloatingHearts() {
 
 /* =====================================================
    INTERSECTION OBSERVER
-   Makes gallery cards animate when visible
+   Animates gallery cards when visible
 ===================================================== */
 
 const photoCards =
@@ -289,8 +292,7 @@ photoCards.forEach(function (card) {
 
 
 /* =====================================================
-   PREVENT EMPTY IMAGE SPACE
-   Add a simple fallback if an image is missing
+   IMAGE ERROR HANDLING
 ===================================================== */
 
 const images =
@@ -309,4 +311,3 @@ images.forEach(function (image) {
     });
 
 });
-```
