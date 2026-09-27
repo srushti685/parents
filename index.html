@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta name="viewport"
@@ -9,65 +10,54 @@
 
     <title>For Mom & Dad ❤️</title>
 
-    <link rel="stylesheet"
-          href="style.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
-    <!-- MUSIC BUTTON -->
-    <div id="music-control"
-         class="music-control">
 
-        <button id="music-btn"
-                type="button">
-            🎵 Play Music
-        </button>
+    <!-- =========================================
+         FLOATING HEARTS
+    ========================================== -->
 
-    </div>
+    <div id="hearts-container"></div>
 
 
-    <!-- BACKGROUND HEARTS -->
-    <div class="floating-hearts">
-        <span>♥</span>
-        <span>♥</span>
-        <span>♥</span>
-        <span>♥</span>
-        <span>♥</span>
-        <span>♥</span>
-    </div>
 
+    <!-- =========================================
+         WELCOME SECTION
+    ========================================== -->
 
-    <!-- WELCOME SECTION -->
     <section id="welcome"
-             class="section welcome-section">
+             class="welcome-section">
 
         <div class="welcome-card">
 
-            <div class="small-heart">
-                ❤️
-            </div>
-
-            <p class="little-heading">
-                A little surprise for...
+            <p class="small-heading">
+                A Little Surprise For You
             </p>
+
 
             <h1>
-                The Two Most Special
-                People In My Life
+                For the Two Most Special People in My Life ❤️
             </h1>
 
+
             <p class="welcome-text">
-                Mom & Dad ❤️
+
+                This little website is a small way of saying
+                thank you for all the love, care and support
+                you have given me.
+
             </p>
 
-            <p class="sub-text">
-                Thank you for filling my life
-                with love, strength and happiness.
-            </p>
 
-            <button id="open-heart"
-                    class="main-button">
+            <button id="open-heart-btn"
+                    class="main-button"
+                    type="button">
 
                 Open My Heart ❤️
 
@@ -78,278 +68,301 @@
     </section>
 
 
-    <!-- MESSAGE SECTION -->
-    <section id="message"
-             class="section message-section hidden">
-
-        <div class="message-card">
-
-            <p class="section-label">
-                A message from my heart
-            </p>
-
-            <h2>
-                Dear Mom & Dad ❤️
-            </h2>
-
-            <div id="parent-message"
-                 class="parent-message"></div>
-
-            <button id="surprise-button"
-                    class="main-button">
-
-                One More Surprise ✨
-
-            </button>
-
-        </div>
-
-    </section>
 
 
-    <!-- SURPRISE BOX -->
-    <section id="surprise"
-             class="section surprise-section hidden">
+    <!-- =========================================
+         MAIN CONTENT
+    ========================================== -->
 
-        <div class="surprise-content">
-
-            <p class="section-label">
-                I kept something special for you...
-            </p>
-
-            <h2>
-                A Little Box Of Memories 🎁
-            </h2>
-
-            <p class="surprise-text">
-                Every picture holds a memory,
-                and every memory holds a piece of my heart.
-            </p>
+    <main id="main-content"
+          class="hidden">
 
 
-            <!-- GIFT BOX -->
-            <button id="gift-box"
-                    class="gift-box"
-                    type="button">
+        <!-- =====================================
+             MESSAGE SECTION
+        ====================================== -->
 
-                <div class="gift-lid">
-                    <span></span>
+        <section id="message-section"
+                 class="message-section">
+
+            <div class="content-card">
+
+                <p class="section-label">
+                    From My Heart
+                </p>
+
+
+                <h2>
+                    Dear Mom & Dad ❤️
+                </h2>
+
+
+                <div id="message-text"
+                     class="message-text">
                 </div>
 
-                <div class="gift-body">
-                    <div class="gift-ribbon"></div>
 
-                    <div class="gift-message">
-                        For Mom & Dad ❤️
+                <button id="surprise-btn"
+                        class="main-button"
+                        type="button">
+
+                    One More Surprise ✨
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+
+        <!-- =====================================
+             PHOTO GALLERY
+        ====================================== -->
+
+        <section id="gallery-section"
+                 class="gallery-section hidden">
+
+
+            <!-- GALLERY HEADING -->
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Beautiful Memories
+                </p>
+
+
+                <h2>
+                    Moments I Treasure ❤️
+                </h2>
+
+
+                <p>
+                    Every memory with you is special to me.
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================
+                 MUSIC BUTTON
+            ================================== -->
+
+            <div id="music-control"
+                 class="music-control">
+
+                <button id="music-btn"
+                        type="button"
+                        aria-label="Play or pause music">
+
+                    🎵 Play Music
+
+                </button>
+
+            </div>
+
+
+
+
+            <!-- =================================
+                 8 PHOTO GALLERY
+            ================================== -->
+
+            <div class="gallery">
+
+
+                <!-- PHOTO 1 -->
+
+                <div class="photo-card">
+
+                    <img src="images/parents1.jpg"
+                         alt="A beautiful memory of Mom and Dad">
+
+                    <div class="photo-caption">
+
+                        A beautiful memory ❤️
+
                     </div>
+
                 </div>
 
-            </button>
 
 
-            <p class="click-text">
-                ✨ Click the box to open your surprise ✨
-            </p>
+                <!-- PHOTO 2 -->
 
-        </div>
+                <div class="photo-card">
 
-    </section>
+                    <img src="images/parents2.jpg"
+                         alt="Mom and Dad together">
 
+                    <div class="photo-caption">
 
-    <!-- PHOTO GALLERY -->
-    <section id="gallery"
-             class="section gallery-section hidden">
+                        Together forever ❤️
 
-        <div class="gallery-heading">
+                    </div>
 
-            <p class="section-label">
-                Our beautiful memories
-            </p>
-
-            <h2>
-                Moments I Will Always Treasure ❤️
-            </h2>
-
-            <p>
-                Eight little memories,
-                one big love.
-            </p>
-
-        </div>
-
-
-        <div class="photo-grid">
-
-
-            <!-- PHOTO 1 -->
-            <div class="photo-card">
-
-                <img src="images/parents1.jpg"
-                     alt="A beautiful memory of Mom and Dad">
-
-                <div class="photo-caption">
-                    <h3>My Safe Place ❤️</h3>
-                    <p>
-                        Wherever you are,
-                        feels like home.
-                    </p>
                 </div>
 
-            </div>
 
 
-            <!-- PHOTO 2 -->
-            <div class="photo-card">
+                <!-- PHOTO 3 -->
 
-                <img src="images/parents2.jpg"
-                     alt="A beautiful memory of Mom and Dad">
+                <div class="photo-card">
 
-                <div class="photo-caption">
-                    <h3>Beautiful Together 💕</h3>
-                    <p>
-                        A love I look up to every day.
-                    </p>
+                    <img src="images/parents3.jpg"
+                         alt="A special family memory">
+
+                    <div class="photo-caption">
+
+                        A moment to remember ✨
+
+                    </div>
+
                 </div>
 
-            </div>
 
 
-            <!-- PHOTO 3 -->
-            <div class="photo-card">
+                <!-- PHOTO 4 -->
 
-                <img src="images/parents3.jpg"
-                     alt="A beautiful memory of Mom and Dad">
+                <div class="photo-card">
 
-                <div class="photo-caption">
-                    <h3>A Moment To Remember ✨</h3>
-                    <p>
-                        One of those moments
-                        worth keeping forever.
-                    </p>
+                    <img src="images/parents4.jpg"
+                         alt="A precious memory with Mom and Dad">
+
+                    <div class="photo-caption">
+
+                        My favorite people ❤️
+
+                    </div>
+
                 </div>
 
-            </div>
 
 
-            <!-- PHOTO 4 -->
-            <div class="photo-card">
+                <!-- PHOTO 5 -->
 
-                <img src="images/parents4.jpg"
-                     alt="A beautiful memory of Mom and Dad">
+                <div class="photo-card">
 
-                <div class="photo-caption">
-                    <h3>My Favorite People ❤️</h3>
-                    <p>
-                        Two people who mean
-                        the world to me.
-                    </p>
+                    <img src="images/parents5.jpg"
+                         alt="Another beautiful memory of Mom and Dad">
+
+                    <div class="photo-caption">
+
+                        A memory close to my heart 💗
+
+                    </div>
+
                 </div>
 
-            </div>
 
 
-            <!-- PHOTO 5 -->
-            <div class="photo-card">
+                <!-- PHOTO 6 -->
 
-                <img src="images/parents5.jpg"
-                     alt="A beautiful memory of Mom and Dad">
+                <div class="photo-card">
 
-                <div class="photo-caption">
-                    <h3>Forever Grateful 🌸</h3>
-                    <p>
-                        Thank you for every little thing.
-                    </p>
+                    <img src="images/parents6.jpg"
+                         alt="A happy family memory">
+
+                    <div class="photo-caption">
+
+                        Happiness is being together ✨
+
+                    </div>
+
                 </div>
 
-            </div>
 
 
-            <!-- PHOTO 6 -->
-            <div class="photo-card">
+                <!-- PHOTO 7 -->
 
-                <img src="images/parents6.jpg"
-                     alt="A beautiful memory of Mom and Dad">
+                <div class="photo-card">
 
-                <div class="photo-caption">
-                    <h3>Love Without Limits 💖</h3>
-                    <p>
-                        Your love is my greatest blessing.
-                    </p>
+                    <img src="images/parents7.jpg"
+                         alt="A special moment with Mom and Dad">
+
+                    <div class="photo-caption">
+
+                        Forever grateful for you ❤️
+
+                    </div>
+
                 </div>
 
-            </div>
 
 
-            <!-- PHOTO 7 -->
-            <div class="photo-card">
+                <!-- PHOTO 8 -->
 
-                <img src="images/parents7.jpg"
-                     alt="A beautiful memory of Mom and Dad">
+                <div class="photo-card">
 
-                <div class="photo-caption">
-                    <h3>Precious Moments 🌷</h3>
-                    <p>
-                        Memories I will carry forever.
-                    </p>
+                    <img src="images/parents8.jpg"
+                         alt="A precious family moment">
+
+                    <div class="photo-caption">
+
+                        My forever home ❤️
+
+                    </div>
+
                 </div>
 
+
             </div>
 
+        </section>
 
-            <!-- PHOTO 8 -->
-            <div class="photo-card">
 
-                <img src="images/parents8.jpg"
-                     alt="A beautiful memory of Mom and Dad">
 
-                <div class="photo-caption">
-                    <h3>Always In My Heart ❤️</h3>
-                    <p>
-                        No matter where life takes me.
-                    </p>
+
+        <!-- =====================================
+             FINAL MESSAGE
+        ====================================== -->
+
+        <section id="final-section"
+                 class="final-section hidden">
+
+
+            <div class="final-card">
+
+
+                <div class="big-heart">
+                    ❤️
                 </div>
 
+
+                <h2>
+                    Thank You For Everything!!
+                </h2>
+
+
+                <p>
+                    No matter where life takes me,
+                    I will always carry your love with me.
+                </p>
+
+
+                <p>
+                    Love you forever,
+                    <strong>Mom & Dad. ❤️</strong>
+                </p>
+
+
             </div>
 
-        </div>
-
-    </section>
+        </section>
 
 
-    <!-- FINAL SECTION -->
-    <section id="final"
-             class="section final-section hidden">
-
-        <div class="final-card">
-
-            <div class="big-heart">
-                ❤️
-            </div>
-
-            <h2>
-                Thank You For Everything!!
-            </h2>
-
-            <p>
-                No matter where life takes me,
-                I will always carry your love with me.
-            </p>
-
-            <p class="final-love">
-                Love you forever,
-                Mom & Dad. ❤️
-            </p>
-
-            <div class="heart-line">
-                ♥ ♥ ♥
-            </div>
-
-        </div>
-
-    </section>
+    </main>
 
 
-    <!-- MUSIC -->
+
+
+    <!-- =========================================
+         AUDIO
+    ========================================== -->
+
     <audio id="background-music"
            loop
            preload="auto">
@@ -357,10 +370,19 @@
         <source src="music/parents-song.mp3"
                 type="audio/mpeg">
 
+        Your browser does not support the audio element.
+
     </audio>
 
 
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
     <script src="script.js"></script>
+
 
 </body>
 
